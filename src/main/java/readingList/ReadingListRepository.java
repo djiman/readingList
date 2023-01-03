@@ -9,5 +9,3 @@ public interface ReadingListRepository extends JpaRepository<Book, Long> {
 
 }
 
-}
-
