@@ -18,7 +18,7 @@ public class ReadingListController {
         this.readingListRepository = readingListRepository;
     }
 
-    @GetMapping(value="/{reader}")
+    @RequestMapping(value="/{reader}", method=RequestMethod.GET)
     public String readersBooks(
             @PathVariable("reader") String reader,
             Model model) {
@@ -30,7 +30,7 @@ public class ReadingListController {
         return "readingList";
     }
 
-    @PostMapping(value="/{reader}")
+    @RequestMapping(value="/{reader}", method=RequestMethod.POST)
     public String addToReadingList(
             @PathVariable("reader") String reader, Book book) {
         book.setReader(reader);
